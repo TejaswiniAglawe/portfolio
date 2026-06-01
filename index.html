@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tejaswini Aglawe | Analytics · AI · Content Creator</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#030307;--white:#ede9ff;--v:#a78bfa;--b:#38bdf8;--p:#f472b6;--g:#34d399;--o:#fb923c;--y:#fbbf24;--muted:rgba(237,233,255,0.42);--gl:rgba(255,255,255,0.035);--glb:rgba(255,255,255,0.07);--glh:rgba(255,255,255,0.06)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
+#cv{position:fixed;inset:0;z-index:0;pointer-events:none}
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;animation:od 30s ease-in-out infinite alternate}
+.o1{width:700px;height:700px;top:-25%;left:-15%;background:radial-gradient(circle,rgba(167,139,250,0.15) 0%,transparent 70%);animation-duration:34s}
+.o2{width:550px;height:550px;bottom:-15%;right:-10%;background:radial-gradient(circle,rgba(56,189,248,0.13) 0%,transparent 70%);animation-duration:28s;animation-delay:-14s}
+.o3{width:400px;height:400px;top:40%;left:42%;background:radial-gradient(circle,rgba(244,114,182,0.08) 0%,transparent 70%);animation-duration:40s;animation-delay:-7s}
+.o4{width:300px;height:300px;top:18%;right:18%;background:radial-gradient(circle,rgba(251,146,60,0.07) 0%,transparent 70%);animation-duration:24s;animation-delay:-20s}
+@keyframes od{0%{transform:translate(0,0) scale(1)}50%{transform:translate(45px,-35px) scale(1.05)}100%{transform:translate(-25px,20px) scale(0.97)}}
+.cglow{width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,0.048) 0%,transparent 70%);position:fixed;pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:left .1s,top .1s}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(3,3,7,0.72);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-bottom:1px solid rgba(255,255,255,0.055)}
+.nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;background:linear-gradient(120deg,var(--v),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:.75rem;letter-spacing:.06em;font-weight:500;text-transform:uppercase;transition:color .25s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--v),var(--b));transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.nav-links a:hover{color:var(--white)}.nav-links a:hover::after{transform:scaleX(1)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 4rem 4rem;position:relative;z-index:1;gap:4rem}
+.hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(167,139,250,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(167,139,250,0.03) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 100%)}
+.hl{position:relative;z-index:1;flex:1}.hr{position:relative;z-index:1;flex-shrink:0}
+.hbadge{display:inline-flex;align-items:center;gap:.55rem;background:rgba(167,139,250,0.07);border:1px solid rgba(167,139,250,0.2);color:var(--v);font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.4rem 1rem;border-radius:100px;margin-bottom:1.7rem;backdrop-filter:blur(12px);animation:fsu .9s .1s both}
+.bdot{width:7px;height:7px;border-radius:50%;background:var(--v);flex-shrink:0;animation:pp 2.2s ease-in-out infinite}
+@keyframes pp{0%,100%{box-shadow:0 0 0 0 rgba(167,139,250,.7)}50%{box-shadow:0 0 0 7px rgba(167,139,250,0)}}
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(3rem,7vw,6.8rem);font-weight:800;line-height:.92;letter-spacing:-.045em;margin-bottom:1.4rem;animation:fsu .9s .22s both}
+.h1d{color:rgba(237,233,255,0.2);display:block}.h1n{display:block}
+.h1g{background:linear-gradient(120deg,var(--v) 0%,var(--b) 45%,var(--p) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:gf 6s ease-in-out infinite alternate}
+@keyframes gf{0%{background-position:0%}100%{background-position:100%}}
+.hsub{font-size:.98rem;color:var(--muted);max-width:500px;line-height:1.8;margin-bottom:1rem;font-weight:300;animation:fsu .9s .38s both}
+.hsub strong{color:rgba(237,233,255,0.78);font-weight:600}
+.hchips{display:flex;flex-wrap:wrap;gap:.42rem;margin-bottom:2.2rem;animation:fsu .9s .48s both}
+.chip{font-family:'JetBrains Mono',monospace;font-size:.64rem;background:rgba(167,139,250,0.07);color:rgba(237,233,255,0.52);border:1px solid rgba(167,139,250,0.12);border-radius:100px;padding:.22rem .7rem}
+.chip-o{background:rgba(251,146,60,0.07);color:rgba(251,146,60,0.7);border-color:rgba(251,146,60,0.15)}
+.hctas{display:flex;gap:1rem;flex-wrap:wrap;animation:fsu .9s .56s both}
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--v),#7c3aed);color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.86rem;padding:.85rem 1.85rem;border-radius:100px;text-decoration:none;transition:transform .25s,box-shadow .3s;box-shadow:0 0 24px rgba(167,139,250,0.2)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 10px 44px rgba(167,139,250,0.45)}
+.btn-g{display:inline-flex;align-items:center;gap:.5rem;background:var(--gl);border:1px solid var(--glb);color:var(--white);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:.86rem;padding:.85rem 1.85rem;border-radius:100px;text-decoration:none;backdrop-filter:blur(14px);transition:all .3s}
+.btn-g:hover{background:rgba(167,139,250,0.09);border-color:rgba(167,139,250,0.32)}
+.hstats{display:flex;gap:2rem;margin-top:2rem;animation:fsu .9s .64s both}
+.stn{font-family:'Bricolage Grotesque',sans-serif;font-size:2.2rem;font-weight:800;line-height:1;display:block;background:linear-gradient(135deg,var(--white),rgba(237,233,255,0.5));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stl{font-size:.67rem;color:var(--muted);letter-spacing:.07em;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.hquote{margin-top:1.8rem;padding:1.1rem 1.4rem;border-radius:12px;background:rgba(167,139,250,0.05);border-left:2px solid var(--v);font-size:.88rem;color:rgba(237,233,255,0.58);line-height:1.7;font-style:italic;font-weight:300;animation:fsu .9s .72s both}
+.pv{position:relative;display:flex;justify-content:center;align-items:center;animation:fsl 1s .5s both}
+.pr{width:310px;height:310px;border-radius:50%;border:1px solid rgba(167,139,250,0.13);display:flex;align-items:center;justify-content:center;position:relative}
+.pr::before{content:'';position:absolute;inset:-18px;border-radius:50%;border:1px dashed rgba(167,139,250,0.08);animation:spin 24s linear infinite}
+.pr::after{content:'';position:absolute;inset:18px;border-radius:50%;border:1px solid rgba(56,189,248,0.08);animation:spin 36s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pi{width:255px;height:255px;border-radius:50%;overflow:hidden;border:2px solid rgba(167,139,250,0.18);background:linear-gradient(135deg,rgba(167,139,250,0.08),rgba(56,189,248,0.04));box-shadow:0 0 65px rgba(167,139,250,0.12),inset 0 0 28px rgba(167,139,250,0.04);display:flex;align-items:center;justify-content:center}
+.pi img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.pinit{font-family:'Bricolage Grotesque',sans-serif;font-size:3.5rem;font-weight:800;background:linear-gradient(135deg,var(--v),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fb{position:absolute;background:rgba(3,3,7,0.78);border:1px solid rgba(167,139,250,0.18);border-radius:13px;padding:.62rem .95rem;font-size:.74rem;font-weight:500;display:flex;align-items:center;gap:.45rem;white-space:nowrap;backdrop-filter:blur(18px)}
+.fb1{top:5%;right:-12%;animation:bf 4s ease-in-out infinite alternate}
+.fb2{bottom:8%;left:-16%;animation:bf 4s ease-in-out infinite alternate;animation-delay:-2s}
+.fb3{top:50%;right:-18%;animation:bf 3.5s ease-in-out infinite alternate;animation-delay:-1s;font-size:.68rem}
+@keyframes bf{0%{transform:translateY(0)}100%{transform:translateY(-9px)}}
+.fbd{width:6px;height:6px;border-radius:50%;background:var(--g);flex-shrink:0;animation:pp 2s infinite}
+@keyframes fsu{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fsl{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
+section{padding:6rem 4rem;position:relative;z-index:1}
+.sl{font-family:'JetBrains Mono',monospace;font-size:.67rem;background:linear-gradient(90deg,var(--v),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.7rem;display:block}
+.st{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.9rem,3.8vw,3.1rem);font-weight:800;letter-spacing:-.035em;line-height:1;margin-bottom:2.5rem}
+.st span{color:rgba(237,233,255,0.2)}
+.divider{border:none;border-top:1px solid var(--glb);margin:0 4rem;position:relative;z-index:1}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.at p{color:var(--muted);font-size:.97rem;line-height:1.85;margin-bottom:1.3rem}
+.at p strong{color:rgba(237,233,255,0.78);font-weight:600}
+.hg{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2rem}
+.hc{padding:1.1rem;border-radius:14px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(14px);transition:all .3s}
+.hc:hover{background:rgba(167,139,250,0.055);border-color:rgba(167,139,250,0.25);transform:translateY(-2px)}
+.hico{font-size:1.25rem;margin-bottom:.4rem}.hlbl{font-size:.68rem;color:var(--muted);margin-bottom:.18rem;font-family:'JetBrains Mono',monospace;letter-spacing:.05em}.hval{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.93rem}
+/* DOMAINS */
+.domains-hero{background:rgba(251,146,60,0.03);border:1px solid rgba(251,146,60,0.1);border-radius:22px;padding:1.8rem 2rem;margin-bottom:2rem}
+.dh-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem;display:block}
+.dh-title{font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:.6rem}
+.dh-desc{font-size:.9rem;color:var(--muted);line-height:1.7;max-width:700px}
+.domains-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;margin-top:1.5rem}
+.dcol-title{font-family:'Bricolage Grotesque',sans-serif;font-size:.98rem;font-weight:800;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.cb{font-family:'JetBrains Mono',monospace;font-size:.6rem;padding:.18rem .6rem;border-radius:100px;font-weight:500}
+.cb-nt{background:rgba(251,146,60,0.1);color:var(--o);border:1px solid rgba(251,146,60,0.18)}
+.cb-t{background:rgba(56,189,248,0.1);color:var(--b);border:1px solid rgba(56,189,248,0.18)}
+.dg{display:grid;grid-template-columns:1fr;gap:.8rem}
+.dc{padding:1.3rem;border-radius:17px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(20px);transition:all .38s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.dc::before{content:'';position:absolute;inset:0;border-radius:17px;background:linear-gradient(135deg,rgba(167,139,250,0.04) 0%,transparent 60%);opacity:0;transition:opacity .38s}
+.dc:hover{transform:translateY(-4px);border-color:rgba(167,139,250,0.26);box-shadow:0 14px 45px rgba(167,139,250,0.08)}.dc:hover::before{opacity:1}
+.dc-nt:hover{border-color:rgba(251,146,60,0.28);box-shadow:0 14px 45px rgba(251,146,60,0.07)}
+.dch{display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem}
+.dico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;border:1px solid rgba(255,255,255,0.05);flex-shrink:0}
+.di1{background:rgba(251,146,60,0.1)}.di2{background:rgba(167,139,250,0.1)}.di3{background:rgba(251,191,36,0.09)}.di4{background:rgba(244,114,182,0.09)}.di5{background:rgba(52,211,153,0.09)}.di6{background:rgba(56,189,248,0.1)}.di7{background:rgba(167,139,250,0.08)}.di8{background:rgba(251,191,36,0.08)}.di9{background:rgba(56,189,248,0.07)}
+.dtitle{font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700}
+.ddesc{font-size:.79rem;color:var(--muted);line-height:1.6}
+.dtags{display:flex;flex-wrap:wrap;gap:.26rem;margin-top:.65rem}
+.tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;background:rgba(167,139,250,0.06);color:rgba(237,233,255,0.48);border:1px solid rgba(167,139,250,0.1);border-radius:100px;padding:.15rem .52rem}
+.tag-o{background:rgba(251,146,60,0.06);color:rgba(251,146,60,0.7);border-color:rgba(251,146,60,0.12)}
+/* EDU */
+.edc{padding:2.2rem;border-radius:22px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(22px);max-width:860px;margin:0 auto;transition:border-color .3s}
+.edc:hover{border-color:rgba(167,139,250,0.2)}
+.eins{font-family:'Bricolage Grotesque',sans-serif;font-size:1.35rem;font-weight:800;margin-bottom:.4rem}
+.edeg{font-size:.84rem;font-weight:600;margin-bottom:.28rem;background:linear-gradient(90deg,var(--v),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.eyr{color:var(--muted);font-size:.76rem;font-family:'JetBrains Mono',monospace;margin-bottom:1.2rem}
+.cgpa-row{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.cgpa-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(167,139,250,0.08);border:1px solid rgba(167,139,250,0.2);border-radius:12px;padding:.7rem 1.2rem}
+.cgpa-n{font-family:'Bricolage Grotesque',sans-serif;font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,var(--v),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.cgpa-l{font-size:.7rem;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.edu-note{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:.8rem;flex:1}
+/* SKILLS */
+.skl{display:grid;grid-template-columns:185px 1fr;gap:2.8rem}
+.skb{display:block;width:100%;background:none;border:none;cursor:pointer;text-align:left;padding:.68rem 1rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:.84rem;color:var(--muted);transition:all .25s;border-left:2px solid transparent;margin-bottom:.2rem}
+.skb.active{color:var(--white);background:rgba(167,139,250,0.07);border-left-color:var(--v)}
+.skb:hover:not(.active){color:rgba(237,233,255,0.72);background:rgba(255,255,255,0.025)}
+.skp{display:none}.skp.active{display:block}
+.skrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.15rem}
+.skname{font-size:.84rem;width:170px;flex-shrink:0}
+.skbg{flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:100px;overflow:hidden}
+.skf{height:100%;border-radius:100px;width:0;background:linear-gradient(90deg,#7c3aed,var(--v),var(--b));transition:width 1.3s cubic-bezier(0.16,1,0.3,1)}
+.skpct{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--muted);width:32px;text-align:right}
+/* PROJECTS */
+.pg{display:grid;grid-template-columns:repeat(2,1fr);gap:1.35rem}
+.pcard{padding:1.8rem;border-radius:20px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(20px);display:flex;flex-direction:column;transition:all .38s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--v),transparent);opacity:0;transition:opacity .38s}
+.pcard:hover{transform:translateY(-5px);border-color:rgba(167,139,250,0.26);box-shadow:0 18px 55px rgba(167,139,250,0.09)}.pcard:hover::before{opacity:1}
+.pcard.feat{grid-column:span 2;border-color:rgba(167,139,250,0.13);background:rgba(167,139,250,0.025)}
+.pst{display:inline-flex;align-items:center;gap:.38rem;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+.sl2c{color:rgba(52,211,153,0.9)}.sl2c .sd{background:rgba(52,211,153,0.9);animation:pp 2s infinite}
+.sw{color:var(--v)}.sw .sd{background:var(--v)}
+.sd{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.ptitle{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:.6rem;letter-spacing:-.02em}
+.pdesc{font-size:.84rem;color:var(--muted);line-height:1.7;flex:1}
+.pf{display:flex;align-items:center;justify-content:space-between;margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid var(--glb)}
+.ptch{display:flex;gap:.32rem;flex-wrap:wrap}
+.tp{font-family:'JetBrains Mono',monospace;font-size:.58rem;background:rgba(255,255,255,0.04);color:var(--muted);border:1px solid var(--glb);border-radius:100px;padding:.16rem .55rem}
+.plnk{display:inline-flex;align-items:center;gap:.32rem;color:var(--v);font-size:.78rem;font-weight:600;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;transition:gap .2s;white-space:nowrap}
+.plnk:hover{gap:.55rem}
+/* EXP */
+.expc{padding:1.8rem;border-radius:20px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(20px);display:grid;grid-template-columns:auto 1fr;gap:1.3rem;max-width:860px;margin-bottom:1.3rem;transition:all .3s}
+.expc:hover{border-color:rgba(56,189,248,0.2);transform:translateX(4px)}
+.expico{width:52px;height:52px;border-radius:13px;background:rgba(56,189,248,0.09);border:1px solid rgba(56,189,248,0.13);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.expco{font-family:'Bricolage Grotesque',sans-serif;font-size:1.05rem;font-weight:700}
+.expro{font-size:.82rem;font-weight:600;margin:.2rem 0;background:linear-gradient(90deg,var(--b),var(--v));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.expyr{color:var(--muted);font-size:.74rem;font-family:'JetBrains Mono',monospace;margin-bottom:.85rem}
+.expul{list-style:none}
+.expul li{font-size:.84rem;color:var(--muted);line-height:1.65;padding-left:1.2rem;position:relative;margin-bottom:.32rem}
+.expul li::before{content:'→';position:absolute;left:0;color:var(--b);font-size:.68rem;top:.12em}
+/* CERT TABS */
+.cert-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.ctab{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.4rem .9rem;border-radius:100px;border:1px solid var(--glb);background:var(--gl);color:var(--muted);cursor:pointer;transition:all .25s;font-weight:500}
+.ctab.active,.ctab:hover{color:var(--white);border-color:rgba(167,139,250,0.35);background:rgba(167,139,250,0.09)}
+.ctab.active{color:var(--v)}
+.cert-panel{display:none}.cert-panel.active{display:block}
+/* CERTS */
+.cg2{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cg4{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
+.cc{padding:1.25rem;border-radius:16px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(20px);display:flex;flex-direction:column;transition:all .38s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.cc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--v),var(--b),var(--p));transform:scaleX(0);transition:transform .38s;transform-origin:left}
+.cc:hover{transform:translateY(-4px);border-color:rgba(167,139,250,0.22);box-shadow:0 14px 42px rgba(167,139,250,0.09)}.cc:hover::after{transform:scaleX(1)}
+.cc.gov{border-color:rgba(251,191,36,0.18);background:rgba(251,191,36,0.02)}
+.cc.gov::after{background:linear-gradient(90deg,var(--y),var(--o),var(--g))}
+.cc.gov:hover{border-color:rgba(251,191,36,0.35);box-shadow:0 14px 42px rgba(251,191,36,0.08)}
+.gov-crown{position:absolute;top:.75rem;right:.75rem;font-size:.85rem}
+.ccat{display:inline-flex;align-items:center;gap:.25rem;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;padding:.12rem .5rem;border-radius:100px;margin-bottom:.45rem;width:fit-content}
+.ccat-g{background:rgba(251,191,36,0.08);color:rgba(251,191,36,0.75);border:1px solid rgba(251,191,36,0.15)}
+.ccat-b{background:rgba(56,189,248,0.08);color:rgba(56,189,248,0.75);border:1px solid rgba(56,189,248,0.15)}
+.ccat-v{background:rgba(167,139,250,0.08);color:rgba(167,139,250,0.75);border:1px solid rgba(167,139,250,0.15)}
+.ccat-gn{background:rgba(52,211,153,0.08);color:rgba(52,211,153,0.75);border:1px solid rgba(52,211,153,0.15)}
+.ccat-o{background:rgba(251,146,60,0.08);color:rgba(251,146,60,0.75);border:1px solid rgba(251,146,60,0.15)}
+.ccat-p{background:rgba(244,114,182,0.08);color:rgba(244,114,182,0.75);border:1px solid rgba(244,114,182,0.15)}
+.ccat-ms{background:rgba(0,120,212,0.1);color:rgba(100,180,255,0.85);border:1px solid rgba(0,120,212,0.2)}
+.ccat-ind{background:rgba(255,153,0,0.08);color:rgba(255,200,0,0.85);border:1px solid rgba(255,153,0,0.18)}
+.cico{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:.8rem;border:1px solid rgba(255,255,255,0.05)}
+.ci-g{background:rgba(251,191,36,0.09)}.ci-b{background:rgba(56,189,248,0.09)}.ci-v{background:rgba(167,139,250,0.09)}.ci-gn{background:rgba(52,211,153,0.09)}.ci-o{background:rgba(251,146,60,0.09)}.ci-p{background:rgba(244,114,182,0.09)}.ci-ms{background:rgba(0,120,212,0.1)}.ci-ind{background:rgba(255,153,0,0.09)}
+.ctitle{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.26rem;line-height:1.3}
+.ciss{font-size:.72rem;color:var(--muted);margin-bottom:auto;line-height:1.4}
+.cyr{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--v);margin-top:.8rem}
+.clnk{display:inline-flex;align-items:center;gap:.28rem;font-size:.7rem;color:rgba(167,139,250,0.62);text-decoration:none;margin-top:.4rem;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;transition:color .2s}
+.clnk:hover{color:var(--v)}
+.cscore{display:inline-flex;align-items:center;gap:.3rem;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.15);border-radius:100px;padding:.16rem .55rem;margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:rgba(52,211,153,0.8)}
+/* cert counter */
+.cert-count-bar{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap}
+.cert-count-item{text-align:center}
+.ccn{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--v),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block}
+.ccl{font-size:.68rem;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+/* ACHIEVEMENTS */
+.achg{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;max-width:860px}
+.achc{padding:1.3rem;border-radius:16px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(20px);display:flex;gap:.9rem;align-items:flex-start;transition:all .3s}
+.achc:hover{border-color:rgba(167,139,250,0.2);transform:translateY(-2px)}
+.achico{font-size:1.6rem;flex-shrink:0}
+.achtit{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.28rem}
+.achdesc{font-size:.79rem;color:var(--muted);line-height:1.5}
+/* EXTRA */
+.extg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.extc{padding:1.75rem;border-radius:20px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(20px);transition:all .38s}
+.extc:hover{border-color:rgba(244,114,182,0.2);transform:translateY(-4px);box-shadow:0 14px 45px rgba(244,114,182,0.07)}
+.ext-emo{font-size:1.9rem;margin-bottom:.8rem;display:block}
+.ext-tit{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.96rem;margin-bottom:.4rem}
+.ext-desc{font-size:.81rem;color:var(--muted);line-height:1.6}
+.ext-list{list-style:none;margin-top:.7rem}
+.ext-list li{font-size:.77rem;color:var(--muted);padding-left:1rem;position:relative;margin-bottom:.2rem}
+.ext-list li::before{content:'·';position:absolute;left:0;color:var(--v);font-size:1rem;line-height:1}
+/* YT */
+.ytcard{padding:1.9rem;border-radius:20px;background:var(--gl);border:1px solid var(--glb);backdrop-filter:blur(20px);display:grid;grid-template-columns:auto 1fr;gap:1.8rem;align-items:center;max-width:800px;transition:border-color .3s}
+.ytcard:hover{border-color:rgba(244,114,182,0.2)}
+.ytinco{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,rgba(244,114,182,0.18),rgba(167,139,250,0.13));border:1px solid rgba(244,114,182,0.18);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 0 28px rgba(244,114,182,0.09)}
+.ytn{font-family:'Bricolage Grotesque',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:.28rem}
+.ytsub{font-size:.82rem;color:var(--muted);margin-bottom:.85rem}
+.ytpills{display:flex;flex-wrap:wrap;gap:.36rem}
+.ytp{font-family:'JetBrains Mono',monospace;font-size:.61rem;background:rgba(244,114,182,0.06);color:rgba(244,114,182,0.65);border:1px solid rgba(244,114,182,0.12);border-radius:100px;padding:.18rem .6rem}
+/* CONTACT */
+.csec{position:relative;overflow:hidden}
+.cglw{position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,0.08) 0%,transparent 65%);pointer-events:none}
+.cinn{position:relative;z-index:1;text-align:center}
+.ctit2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.4rem,5vw,5.2rem);font-weight:800;letter-spacing:-.04em;margin-bottom:1.3rem;line-height:.94}
+.cgrad{background:linear-gradient(120deg,var(--v),var(--b),var(--p));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:gf 6s ease-in-out infinite alternate}
+.csub2{font-size:.95rem;color:var(--muted);margin-bottom:2.5rem;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7}
+.clnks{display:flex;justify-content:center;gap:.9rem;flex-wrap:wrap}
+.clink{display:inline-flex;align-items:center;gap:.52rem;background:var(--gl);border:1px solid var(--glb);color:var(--white);text-decoration:none;padding:.82rem 1.6rem;border-radius:100px;font-size:.84rem;font-weight:500;backdrop-filter:blur(20px);transition:all .3s}
+.clink:hover{border-color:rgba(167,139,250,0.3);background:rgba(167,139,250,0.07);color:var(--v);transform:translateY(-2px)}
+footer{padding:1.8rem 4rem;border-top:1px solid var(--glb);display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.flogo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;background:linear-gradient(120deg,var(--v),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ftxt{font-size:.76rem;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:rgba(167,139,250,0.26);border-radius:100px}
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}.nav-links{display:none}
+  section{padding:4rem 1.5rem}
+  .hero{padding:7rem 1.5rem 3rem;flex-direction:column;gap:2rem}
+  .hero h1{font-size:3rem}.hstats{flex-direction:row}.hr{display:none}
+  .ag{grid-template-columns:1fr}.domains-wrap{grid-template-columns:1fr}
+  .skl{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.pcard.feat{grid-column:span 1}
+  .cg2{grid-template-columns:1fr 1fr}.cg4{grid-template-columns:repeat(2,1fr)}
+  .achg,.extg{grid-template-columns:1fr}.ytcard{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.8rem 1.5rem}
+  .divider{margin:0 1.5rem}.cglow{display:none}
+  .cert-tabs{gap:.4rem}
+}
+</style>
+</head>
+<body>
+<div class="cglow" id="cg"></div>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="orb o4"></div>
+<canvas id="cv"></canvas>
+
+<nav>
+  <div class="nav-logo">TA</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#domains">Domains</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#extra">Life</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hl">
+    <div class="hbadge"><span class="bdot"></span>Open to Opportunities</div>
+    <h1><span class="h1d">Hello, I'm</span><span class="h1n">Tejaswini</span><span class="h1g">Aglawe.</span></h1>
+    <p class="hsub">Passionate about <strong>Analytics, AI & Digital Marketing</strong> — with a solid CSE foundation, 25+ certificates, and a love for content creation and storytelling.</p>
+    <div class="hchips">
+      <span class="chip chip-o">Data Analytics</span><span class="chip chip-o">Digital Marketing</span>
+      <span class="chip chip-o">Google Analytics</span><span class="chip chip-o">Content Creation</span>
+      <span class="chip chip-o">Event Management</span><span class="chip">GenAI · Microsoft</span>
+      <span class="chip">NPTEL Elite</span><span class="chip">Viksit Bharat</span>
+    </div>
+    <div class="hctas">
+      <a href="#contact" class="btn-p">Let's Connect →</a>
+      <a href="#certifications" class="btn-g">View 25+ Certs</a>
+    </div>
+    <div class="hstats">
+      <div><span class="stn">8.0</span><span class="stl">CGPA</span></div>
+      <div><span class="stn">25+</span><span class="stl">Certificates</span></div>
+      <div><span class="stn">3+</span><span class="stl">Hackathons</span></div>
+    </div>
+    <div class="hquote">"I enjoy combining technical knowledge with creativity — analytics, AI, content creation, and civic engagement all at once."</div>
+  </div>
+  <div class="hr">
+    <div class="pv">
+      <div class="pr">
+        <div class="pi">
+          <img src="https://tejaswiniaglawe.github.io/professional_portfolio/profile.jpeg" alt="Tejaswini Aglawe" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pinit" style="display:none">TA</div>
+        </div>
+      </div>
+      <div class="fb fb1"><span class="fbd"></span>Analytics · AI · Creator</div>
+      <div class="fb fb2">📊 Google Analytics Certified</div>
+      <div class="fb fb3">🇮🇳 Viksit Bharat Leader</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="ag reveal">
+    <div class="at">
+      <span class="sl">// about me</span>
+      <h2 class="st">Where analytics meets <span>creativity</span></h2>
+      <p>I'm <strong>Tejaswini Aglawe</strong>, a B.Tech CSE student at YCCE Nagpur passionate about <strong>data analytics, digital marketing, and AI</strong>. My technical degree gives me an edge — I understand the tools behind the data and bridge both worlds.</p>
+      <p>Certified by <strong>Google, Microsoft (Skill India), IIT Kharagpur (NPTEL Elite)</strong>, and with participation in <strong>Viksit Bharat Young Leaders Dialogue</strong> and <strong>MY Bharat Budget Quest</strong> — I engage actively in nation-building alongside academics.</p>
+      <p>Outside academics I run a <strong>YouTube travel vlog</strong>, play chess, volunteer in events, and maintain a fitness routine — balancing discipline across everything I do.</p>
+      <div class="hg">
+        <div class="hc"><div class="hico">📍</div><div class="hlbl">Location</div><div class="hval">Nagpur, India</div></div>
+        <div class="hc"><div class="hico">🎓</div><div class="hlbl">Degree</div><div class="hval">B.Tech CSE</div></div>
+        <div class="hc"><div class="hico">📊</div><div class="hlbl">Focus</div><div class="hval">Analytics & AI</div></div>
+        <div class="hc"><div class="hico">✉️</div><div class="hlbl">Email</div><div class="hval" style="font-size:.74rem">tejaswiniaglawe27@gmail.com</div></div>
+      </div>
+    </div>
+    <div class="pv" style="animation:none">
+      <div class="pr">
+        <div class="pi">
+          <img src="https://tejaswiniaglawe.github.io/professional_portfolio/profile.jpeg" alt="Tejaswini" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pinit" style="display:none">TA</div>
+        </div>
+      </div>
+      <div class="fb fb1"><span class="fbd"></span>Available to hire</div>
+      <div class="fb fb2">🎓 YCCE Nagpur · ISTE Member</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="domains">
+  <span class="sl reveal">// areas of interest</span>
+  <h2 class="st reveal">Non-Technical First, <span>Tech Backed</span></h2>
+  <div class="domains-hero reveal">
+    <span class="dh-label">🎯 primary focus</span>
+    <div class="dh-title">Analytics, Marketing & Creative Work</div>
+    <div class="dh-desc">While I study CSE, my heart is in <strong style="color:rgba(237,233,255,0.8)">data analytics, digital marketing, event management, and content creation</strong>. My technical background gives me an edge — I understand the tools behind the data.</div>
+  </div>
+  <div class="domains-wrap reveal">
+    <div>
+      <div class="dcol-title">🎯 Non-Technical Interests <span class="cb cb-nt">Primary Focus</span></div>
+      <div class="dg">
+        <div class="dc dc-nt"><div class="dch"><div class="dico di1">📊</div><div class="dtitle">Data Analytics</div></div><div class="ddesc">Google Analytics certified. TATA Forage GenAI Data Analytics simulation — EDA, risk profiling, data storytelling.</div><div class="dtags"><span class="tag tag-o">Google Analytics</span><span class="tag tag-o">Dashboards</span><span class="tag tag-o">EDA</span></div></div>
+        <div class="dc dc-nt"><div class="dch"><div class="dico di3">📈</div><div class="dtitle">Digital Marketing</div></div><div class="ddesc">SEO, online campaigns, audience targeting, and brand growth across digital platforms and social media channels.</div><div class="dtags"><span class="tag tag-o">SEO</span><span class="tag tag-o">Social Media</span><span class="tag tag-o">Campaigns</span></div></div>
+        <div class="dc dc-nt"><div class="dch"><div class="dico di5">🎥</div><div class="dtitle">Content Creation</div></div><div class="ddesc">YouTube travel vlogs, Reels, Shorts for "Teju Aglawe" — editing, production and growing an audience.</div><div class="dtags"><span class="tag tag-o">YouTube</span><span class="tag tag-o">Reels</span><span class="tag tag-o">Storytelling</span></div></div>
+        <div class="dc dc-nt"><div class="dch"><div class="dico di4">🗂️</div><div class="dtitle">Event & Team Management</div></div><div class="ddesc">Certificate of Appreciation as Event Management Volunteer at YCCE Upsurge 2024-25 from HoD CSE.</div><div class="dtags"><span class="tag tag-o">Planning</span><span class="tag tag-o">Coordination</span><span class="tag tag-o">Leadership</span></div></div>
+        <div class="dc dc-nt"><div class="dch"><div class="dico di1">🇮🇳</div><div class="dtitle">Civic Engagement</div></div><div class="ddesc">Participated in Viksit Bharat Young Leaders Dialogue 2026 and MY Bharat Budget Quest 2026 via MYBharat portal — Ministry of Youth Affairs.</div><div class="dtags"><span class="tag tag-o">Viksit Bharat</span><span class="tag tag-o">MYBharat</span><span class="tag tag-o">Leadership</span></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="dcol-title">💻 Technical Knowledge <span class="cb cb-t">CSE Background</span></div>
+      <div class="dg">
+        <div class="dc"><div class="dch"><div class="dico di2">🤖</div><div class="dtitle">Generative AI & ML</div></div><div class="ddesc">Microsoft NCVET certified — "Unlocking AI for Everyone". Webinar on Career Opportunities in AI Era. TATA GenAI Analytics simulation.</div><div class="dtags"><span class="tag">GenAI</span><span class="tag">ML Basics</span><span class="tag">AI Tools</span></div></div>
+        <div class="dc"><div class="dch"><div class="dico di9">📦</div><div class="dtitle">Big Data Analytics</div></div><div class="ddesc">NPTEL Elite certified in DBMS (IIT Kharagpur, 71%). Understanding data pipelines, storage and analytics at scale.</div><div class="dtags"><span class="tag">NPTEL Elite</span><span class="tag">DBMS</span><span class="tag">Analytics</span></div></div>
+        <div class="dc"><div class="dch"><div class="dico di6">☁️</div><div class="dtitle">Cloud Computing</div></div><div class="ddesc">Hands-on via Plasmid internship — AWS services, cloud deployment and scalable infrastructure design.</div><div class="dtags"><span class="tag">AWS</span><span class="tag">Deployment</span></div></div>
+        <div class="dc"><div class="dch"><div class="dico di7">🌐</div><div class="dtitle">Web Development</div></div><div class="ddesc">Built websites using HTML, CSS, WordPress and Lovable AI — first AI-generated professional website.</div><div class="dtags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">WordPress</span></div></div>
+        <div class="dc"><div class="dch"><div class="dico di8">🐍</div><div class="dtitle">Python Programming</div></div><div class="ddesc">MyCaptain Python course certified — Skill India & NSDC endorsed. Programming fundamentals for data and automation.</div><div class="dtags"><span class="tag">Python</span><span class="tag">NSDC</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <span class="sl reveal">// education</span>
+  <h2 class="st reveal">Academic <span>background</span></h2>
+  <div class="edc reveal">
+    <div class="eins">Yeshwantrao Chavan College of Engineering</div>
+    <div class="edeg">B.Tech in Computer Science & Engineering &nbsp;·&nbsp; NAAC A++ Accredited</div>
+    <div class="eyr">📍 Nagpur, Maharashtra &nbsp;·&nbsp; 2023 – 2027 &nbsp;·&nbsp; ISTE Student Member (SC MH057, SM 3767)</div>
+    <div class="cgpa-row">
+      <div class="cgpa-badge"><div><div class="cgpa-n">8.0</div><div class="cgpa-l">CGPA (5 Sems)</div></div></div>
+      <div class="edu-note">Consistently growing across semesters — combining technical coursework with 25+ self-driven certifications in analytics, AI, data science, and national-level programmes.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="skills">
+  <span class="sl reveal">// skills</span>
+  <h2 class="st reveal">Technical & Professional <span>skills</span></h2>
+  <div class="skl reveal">
+    <div>
+      <button class="skb active" onclick="showSkill(event,'analytics')">📊 Analytics</button>
+      <button class="skb" onclick="showSkill(event,'market')">📈 Marketing</button>
+      <button class="skb" onclick="showSkill(event,'ai')">🤖 AI & GenAI</button>
+      <button class="skb" onclick="showSkill(event,'prog')">💻 Programming</button>
+      <button class="skb" onclick="showSkill(event,'cloud')">☁️ Cloud & Web</button>
+      <button class="skb" onclick="showSkill(event,'soft')">🎯 Soft Skills</button>
+    </div>
+    <div>
+      <div id="sk-analytics" class="skp active">
+        <div class="skrow"><span class="skname">Google Analytics</span><div class="skbg"><div class="skf" data-w="85"></div></div><span class="skpct">85%</span></div>
+        <div class="skrow"><span class="skname">Data Storytelling</span><div class="skbg"><div class="skf" data-w="78"></div></div><span class="skpct">78%</span></div>
+        <div class="skrow"><span class="skname">EDA & Risk Profiling</span><div class="skbg"><div class="skf" data-w="74"></div></div><span class="skpct">74%</span></div>
+        <div class="skrow"><span class="skname">MySQL / DBMS</span><div class="skbg"><div class="skf" data-w="78"></div></div><span class="skpct">78%</span></div>
+        <div class="skrow"><span class="skname">Big Data Concepts</span><div class="skbg"><div class="skf" data-w="60"></div></div><span class="skpct">60%</span></div>
+      </div>
+      <div id="sk-market" class="skp">
+        <div class="skrow"><span class="skname">Digital Marketing</span><div class="skbg"><div class="skf" data-w="72"></div></div><span class="skpct">72%</span></div>
+        <div class="skrow"><span class="skname">Social Media Mgmt</span><div class="skbg"><div class="skf" data-w="84"></div></div><span class="skpct">84%</span></div>
+        <div class="skrow"><span class="skname">Content Strategy</span><div class="skbg"><div class="skf" data-w="78"></div></div><span class="skpct">78%</span></div>
+        <div class="skrow"><span class="skname">SEO Basics</span><div class="skbg"><div class="skf" data-w="64"></div></div><span class="skpct">64%</span></div>
+        <div class="skrow"><span class="skname">Personal Branding</span><div class="skbg"><div class="skf" data-w="82"></div></div><span class="skpct">82%</span></div>
+      </div>
+      <div id="sk-ai" class="skp">
+        <div class="skrow"><span class="skname">Prompt Engineering</span><div class="skbg"><div class="skf" data-w="84"></div></div><span class="skpct">84%</span></div>
+        <div class="skrow"><span class="skname">Generative AI (MS)</span><div class="skbg"><div class="skf" data-w="76"></div></div><span class="skpct">76%</span></div>
+        <div class="skrow"><span class="skname">AI Website Tools</span><div class="skbg"><div class="skf" data-w="82"></div></div><span class="skpct">82%</span></div>
+        <div class="skrow"><span class="skname">ML Basics</span><div class="skbg"><div class="skf" data-w="54"></div></div><span class="skpct">54%</span></div>
+      </div>
+      <div id="sk-prog" class="skp">
+        <div class="skrow"><span class="skname">Python</span><div class="skbg"><div class="skf" data-w="70"></div></div><span class="skpct">70%</span></div>
+        <div class="skrow"><span class="skname">C</span><div class="skbg"><div class="skf" data-w="80"></div></div><span class="skpct">80%</span></div>
+        <div class="skrow"><span class="skname">Java</span><div class="skbg"><div class="skf" data-w="68"></div></div><span class="skpct">68%</span></div>
+        <div class="skrow"><span class="skname">SQL / MySQL</span><div class="skbg"><div class="skf" data-w="78"></div></div><span class="skpct">78%</span></div>
+        <div class="skrow"><span class="skname">HTML / CSS</span><div class="skbg"><div class="skf" data-w="88"></div></div><span class="skpct">88%</span></div>
+      </div>
+      <div id="sk-cloud" class="skp">
+        <div class="skrow"><span class="skname">AWS (Basics)</span><div class="skbg"><div class="skf" data-w="66"></div></div><span class="skpct">66%</span></div>
+        <div class="skrow"><span class="skname">WordPress</span><div class="skbg"><div class="skf" data-w="82"></div></div><span class="skpct">82%</span></div>
+        <div class="skrow"><span class="skname">Git & GitHub</span><div class="skbg"><div class="skf" data-w="80"></div></div><span class="skpct">80%</span></div>
+        <div class="skrow"><span class="skname">Cloud Deployment</span><div class="skbg"><div class="skf" data-w="62"></div></div><span class="skpct">62%</span></div>
+      </div>
+      <div id="sk-soft" class="skp">
+        <div class="skrow"><span class="skname">Communication</span><div class="skbg"><div class="skf" data-w="88"></div></div><span class="skpct">88%</span></div>
+        <div class="skrow"><span class="skname">Creative Thinking</span><div class="skbg"><div class="skf" data-w="92"></div></div><span class="skpct">92%</span></div>
+        <div class="skrow"><span class="skname">Self-Discipline</span><div class="skbg"><div class="skf" data-w="94"></div></div><span class="skpct">94%</span></div>
+        <div class="skrow"><span class="skname">Event Management</span><div class="skbg"><div class="skf" data-w="82"></div></div><span class="skpct">82%</span></div>
+        <div class="skrow"><span class="skname">Content Creation</span><div class="skbg"><div class="skf" data-w="86"></div></div><span class="skpct">86%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <span class="sl reveal">// projects</span>
+  <h2 class="st reveal">Things I've <span>built</span></h2>
+  <div class="pg reveal">
+    <div class="pcard feat">
+      <span class="pst sl2c"><span class="sd"></span>First AI-Built Website · Live</span>
+      <div class="ptitle">AI-Based Portfolio Website — Built with Lovable AI ✨</div>
+      <p class="pdesc">My very first website — built entirely using <strong style="color:rgba(237,233,255,0.75)">Lovable AI</strong>. Designed a professional, responsive portfolio showcasing services, profile and contact info. Proves that AI is transforming the way we build for the web — no traditional coding pipeline, just smart prompting and vision.</p>
+      <div class="pf"><div class="ptch"><span class="tp">Lovable AI</span><span class="tp">HTML</span><span class="tp">CSS</span><span class="tp">AI Dev</span></div><a href="https://drankushaglawe.lovable.app/" target="_blank" class="plnk">View Live →</a></div>
+    </div>
+    <div class="pcard">
+      <span class="pst sl2c"><span class="sd"></span>Completed</span>
+      <div class="ptitle">GenAI Data Analytics Simulation (TATA · Forage)</div>
+      <p class="pdesc">TATA's GenAI-powered Job Simulation — EDA, risk profiling, predicting delinquency with AI, and business data storytelling for collections strategy.</p>
+      <div class="pf"><div class="ptch"><span class="tp">GenAI</span><span class="tp">EDA</span><span class="tp">Risk Profiling</span><span class="tp">Forage</span></div></div>
+    </div>
+    <div class="pcard">
+      <span class="pst sl2c"><span class="sd"></span>Completed</span>
+      <div class="ptitle">WordPress Website (Coursera)</div>
+      <p class="pdesc">Built a fully responsive website through Coursera Project Network. Applied WordPress best practices — layout, theming, and content management across pages.</p>
+      <div class="pf"><div class="ptch"><span class="tp">WordPress</span><span class="tp">HTML</span><span class="tp">CSS</span></div><a href="https://coursera.org/verify/QU7KZUBS0BOF" target="_blank" class="plnk">Certificate →</a></div>
+    </div>
+    <div class="pcard">
+      <span class="pst sw"><span class="sd"></span>In Progress</span>
+      <div class="ptitle">ML / Data Science Project</div>
+      <p class="pdesc">Applying data science fundamentals from the IETE bootcamp — working with real-world datasets, EDA, visualization, and ML model building in Python.</p>
+      <div class="pf"><div class="ptch"><span class="tp">Python</span><span class="tp">ML</span><span class="tp">EDA</span><span class="tp">Data Science</span></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="experience">
+  <span class="sl reveal">// experience</span>
+  <h2 class="st reveal">Work <span>experience</span></h2>
+  <div class="expc reveal">
+    <div class="expico">☁️</div>
+    <div>
+      <div class="expco">Plasmid, Bangalore</div>
+      <div class="expro">Cloud Computing Intern</div>
+      <div class="expyr">March 2025 – May 2025</div>
+      <ul class="expul">
+        <li>Gained hands-on experience with cloud fundamentals, deployment pipelines, and AWS infrastructure.</li>
+        <li>Worked with various cloud services and tools in a professional, real-world environment.</li>
+        <li>Applied theoretical cloud knowledge to practical deployments and earned the internship certification.</li>
+        <li>Strengthened professional communication, teamwork, and technical problem-solving skills.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <span class="sl reveal">// certifications</span>
+  <h2 class="st reveal">All 25+ Certificates & <span>Credentials</span></h2>
+
+  <div class="cert-count-bar reveal">
+    <div class="cert-count-item"><span class="ccn">3</span><span class="ccl">Govt / National</span></div>
+    <div class="cert-count-item"><span class="ccn">5</span><span class="ccl">Tech / Analytics</span></div>
+    <div class="cert-count-item"><span class="ccn">5</span><span class="ccl">Hackathons</span></div>
+    <div class="cert-count-item"><span class="ccn">2</span><span class="ccl">Civic / MYBharat</span></div>
+    <div class="cert-count-item"><span class="ccn">10+</span><span class="ccl">College Events</span></div>
+    <div class="cert-count-item"><span class="ccn">1</span><span class="ccl">Membership</span></div>
+  </div>
+
+  <div class="cert-tabs reveal">
+    <button class="ctab active" onclick="showCert(event,'govt')">🏛️ Govt & National</button>
+    <button class="ctab" onclick="showCert(event,'tech')">💻 Tech & Analytics</button>
+    <button class="ctab" onclick="showCert(event,'hack')">🏆 Hackathons</button>
+    <button class="ctab" onclick="showCert(event,'civic')">🇮🇳 Civic & MYBharat</button>
+    <button class="ctab" onclick="showCert(event,'college')">🎓 College Events</button>
+    <button class="ctab" onclick="showCert(event,'member')">🌐 Memberships</button>
+  </div>
+
+  <!-- GOVT -->
+  <div id="cert-govt" class="cert-panel active reveal">
+    <div class="cg2">
+      <div class="cc gov">
+        <div class="gov-crown">🏛️</div>
+        <div class="ccat ccat-g">Google · Skillshop</div>
+        <div class="cico ci-g">📊</div>
+        <div class="ctitle">Google Analytics Certification</div>
+        <div class="ciss">Certified in website analytics, traffic analysis, audience insights & performance tracking. ID: 183797552</div>
+        <div class="cscore">✓ Verified by Google</div>
+        <div class="cyr">Issued: May 29, 2026 · Expires: May 2027</div>
+      </div>
+      <div class="cc gov">
+        <div class="gov-crown">🏛️</div>
+        <div class="ccat ccat-ms">Microsoft · Skill India · NCVET</div>
+        <div class="cico ci-ms">🤖</div>
+        <div class="ctitle">Unlocking AI for Everyone — Microsoft</div>
+        <div class="ciss">Skill Competency Certificate. NSQF Level 2. Recognised by NCVET, Govt. of India. Enrolment: 2026052656468763</div>
+        <div class="cscore">✓ NSQF Level 2 · Govt Recognised</div>
+        <div class="cyr">Issued: May 26, 2026</div>
+      </div>
+      <div class="cc gov">
+        <div class="gov-crown">🏛️</div>
+        <div class="ccat ccat-b">NPTEL · IIT Kharagpur · MoE</div>
+        <div class="cico ci-b">🎓</div>
+        <div class="ctitle">NPTEL Elite — Database Management System</div>
+        <div class="ciss">IIT Kharagpur (Prof. Haimanti Banerji). 8-week course funded by MoE, Govt. of India. Skill India. Roll: NPTEL26CS39S663502608</div>
+        <div class="cscore">✓ Score: 71% · 3 Credits · Elite</div>
+        <div class="cyr">Jan – Mar 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECH -->
+  <div id="cert-tech" class="cert-panel reveal">
+    <div class="cg2">
+      <div class="cc">
+        <div class="ccat ccat-v">TATA · Forage</div>
+        <div class="cico ci-v">🤖</div>
+        <div class="ctitle">GenAI Powered Data Analytics Job Simulation</div>
+        <div class="ciss">EDA & risk profiling, predicting delinquency with AI, business data storytelling, AI-driven collections strategy</div>
+        <div class="cyr">May 26, 2026</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-v">IETE · Codon's</div>
+        <div class="cico ci-v">📈</div>
+        <div class="ctitle">Mastering Data Science Bootcamp</div>
+        <div class="ciss">Value Added Course — "Mastering Data Science: A Comprehensive Bootcamp For Future Innovators" by Shivam Joshi, IETE Students Forum, YCCE. Sep 15-18, 2023</div>
+        <div class="cyr">September 2023</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-o">MyCaptain · Skill India · NSDC</div>
+        <div class="cico ci-o">🐍</div>
+        <div class="ctitle">Python Programming Course</div>
+        <div class="ciss">MyCaptain (May 2026 Batch) — Python fundamentals, endorsed by Skill India & NSDC. Certificate ID: A5N899JPCC</div>
+        <div class="cyr">May 2026</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-b">Coursera Project Network</div>
+        <div class="cico ci-b">🌐</div>
+        <div class="ctitle">Build a Free Website with WordPress</div>
+        <div class="ciss">Responsive website building, WordPress layout, theming and content management. Verify: coursera.org/verify/QU7KZUBS0BOF</div>
+        <div class="cyr">Jan 27, 2025</div>
+        <a href="https://coursera.org/verify/QU7KZUBS0BOF" target="_blank" class="clnk">Verify ↗</a>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-b">Cloud Internship</div>
+        <div class="cico ci-b">☁️</div>
+        <div class="ctitle">Cloud Computing Internship</div>
+        <div class="ciss">Plasmid, Bangalore — AWS services, cloud deployment, scalable infrastructure and real-world cloud project delivery</div>
+        <div class="cyr">March – May 2025</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-v">ipsr solutions ltd</div>
+        <div class="cico ci-v">🎙️</div>
+        <div class="ctitle">Webinar — Career Opportunities in the AI Era</div>
+        <div class="ciss">ipsr solutions limited — Webinar on AI career opportunities. Certificate ID: TTjIMIQBMM. Dr. Mendus Jacob (MCA Director, Marian College)</div>
+        <div class="cyr">Jan 7, 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HACKATHONS -->
+  <div id="cert-hack" class="cert-panel reveal">
+    <div class="cg2">
+      <div class="cc">
+        <div class="ccat ccat-gn">Hackathon · Govt. of India</div>
+        <div class="cico ci-gn">🚀</div>
+        <div class="ctitle">Smart India Hackathon 2025</div>
+        <div class="ciss">YCCE Dept. of CSE — Showcased creativity, innovation and problem-solving. Signed by HoD Dr. Lalit Damahe & SIH Coordinator</div>
+        <div class="cyr">2025</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-gn">Hackathon · National 24hr</div>
+        <div class="cico ci-gn">⚡</div>
+        <div class="ctitle">National Level 24hr Smackathon 2k25</div>
+        <div class="ciss">YCCE TechFest Upsurge 2k25, Dept. of CSE — Certificate of Achievement. Signed by HoD Dr. Lalit B. Damahe</div>
+        <div class="cyr">2025</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-p">ITechRoots 13.0 · YCCE IT Dept</div>
+        <div class="cico ci-p">💡</div>
+        <div class="ctitle">Hackathon — ITechRoots 13.0</div>
+        <div class="ciss">Dept. of Information Technology, YCCE. Participation in Hackathon during ITechRoots 13.0. Oct 11-13, 2023</div>
+        <div class="cyr">Oct 11-13, 2023</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-b">TechFest · YCCE CSE</div>
+        <div class="cico ci-b">📡</div>
+        <div class="ctitle">Data Engineering Webinar — Upsurge</div>
+        <div class="ciss">YCCE TechFest Upsurge — Active participation in Data Engineering Webinar. In association with YCCE ACM Student Chapter. Aug 24, 2024</div>
+        <div class="cyr">Aug 24, 2024</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-p">DELNET · Library Network</div>
+        <div class="cico ci-p">📚</div>
+        <div class="ctitle">DELNET Resources & Services Webinar</div>
+        <div class="ciss">Developing Library Network — Webinar on "DELNET: Resources & Services" organised with YCCE Nagpur</div>
+        <div class="cyr">Jan 28, 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CIVIC -->
+  <div id="cert-civic" class="cert-panel reveal">
+    <div class="cg2">
+      <div class="cc gov">
+        <div class="gov-crown">🇮🇳</div>
+        <div class="ccat ccat-ind">Ministry of Youth Affairs · MYBharat</div>
+        <div class="cico ci-ind">🌟</div>
+        <div class="ctitle">Viksit Bharat Young Leaders Dialogue (VBYLD) 2026</div>
+        <div class="ciss">Ministry of Youth Affairs & Sports, Govt. of India — Online Quiz on VBYLD 2026 via MYBharat portal. Acknowledging contribution towards Viksit Bharat</div>
+        <div class="cyr">Oct 31, 2025</div>
+      </div>
+      <div class="cc gov">
+        <div class="gov-crown">🇮🇳</div>
+        <div class="ccat ccat-ind">Ministry of Youth Affairs · MYBharat</div>
+        <div class="cico ci-ind">💰</div>
+        <div class="ctitle">MY Bharat Budget Quest 2026</div>
+        <div class="ciss">Ministry of Youth Affairs & Sports, Govt. of India — Online Quiz on MY Bharat Budget Quest 2026 via MYBharat portal</div>
+        <div class="cyr">Feb 17, 2026</div>
+      </div>
+      <div class="cc gov">
+        <div class="gov-crown">🇮🇳</div>
+        <div class="ccat ccat-ind">ISRO · MyGov · G20 India</div>
+        <div class="cico ci-ind">🚀</div>
+        <div class="ctitle">Chandrayaan-3 Mahaquiz</div>
+        <div class="ciss">ISRO (Director N. Sudheer Kumar) + MyGov (CEO Akash Tripathi) — Successfully completed Chandrayaan-3 Mahaquiz under Azadi Ka Amrit Mahotsav</div>
+        <div class="cyr">2023</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-gn">Ministry of Ayush · NCISM · CSIR-IGIB</div>
+        <div class="cico ci-gn">🌿</div>
+        <div class="ctitle">Digital Prakruti Certificate</div>
+        <div class="ciss">Prakruti Parikshan — "Desh Ka Prakruti Parikshan" campaign. Prakruti: Kapha-Pitta dominant. Validated by CSIR-IGIB, New Delhi. Cert ID: #2e72df6d-b33f-4b41-9960-d3cbb4b1b55c</div>
+        <div class="cyr">Dec 11, 2024</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-p">Rotaract Club · RID 3030</div>
+        <div class="cico ci-p">🤝</div>
+        <div class="ctitle">Quiz for a Cause — Rotaract Nagpur Downtown</div>
+        <div class="ciss">Rotaract Club of Nagpur Downtown, RID 3030 — "Quiz for a Cause" Competition. Combining learning with social responsibility and intellectual engagement</div>
+        <div class="cyr">Jan 25, 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLLEGE EVENTS -->
+  <div id="cert-college" class="cert-panel reveal">
+    <div class="cg4">
+      <div class="cc">
+        <div class="ccat ccat-gn">YCCE CSE · Upsurge</div>
+        <div class="cico ci-gn">🏅</div>
+        <div class="ctitle">Event Management Volunteer</div>
+        <div class="ciss">Certificate of Appreciation — Event Management Volunteer at Upsurge 2024-25. Signed by HoD Dr. Lalit Damahe, Dept. of CSE</div>
+        <div class="cyr">2024-25</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-b">YCCE Applied Chemistry</div>
+        <div class="cico ci-b">🧪</div>
+        <div class="ctitle">Hands-on Training on Water Analysis</div>
+        <div class="ciss">Dept. of Applied Chemistry, YCCE — Student Development Program. Signed by Principal Dr. U.P. Waghe</div>
+        <div class="cyr">Mar 11-15, 2024</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-v">Verbal Community · YCCE</div>
+        <div class="cico ci-v">🗣️</div>
+        <div class="ctitle">Tug of Words Competition</div>
+        <div class="ciss">YCCE — Exceptional skills and eloquence in "Tug of Words" competition by Verbal Community. Signed by Dean Dr. Aniket P. Munshi</div>
+        <div class="cyr">Apr 20, 2024</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-o">YCCE Applied Chemistry</div>
+        <div class="cico ci-o">🌿</div>
+        <div class="ctitle">Chemical Society — Green Waste & Composting</div>
+        <div class="ciss">Chemical Society, Dept. of Applied Chemistry, YCCE — Seminar on Green Waste & Composting at Home. Student Development Program</div>
+        <div class="cyr">2023</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-p">ITechRoots 13.0 · YCCE IT</div>
+        <div class="cico ci-p">♟️</div>
+        <div class="ctitle">Chess — ITechRoots 13.0</div>
+        <div class="ciss">Dept. of Information Technology, YCCE — Participation in Chess during ITechRoots 13.0. Oct 11-13, 2023</div>
+        <div class="cyr">Oct 2023</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-b">YCCE Sports Club</div>
+        <div class="cico ci-b">♟️</div>
+        <div class="ctitle">Chess Tournament — YCCE Sports Club</div>
+        <div class="ciss">YCCE Sports Club — Chess Tournament. Signed by Dean Students Activities Dr. A.P. Munshi & Sports Incharge Dr. I.S. Kohale</div>
+        <div class="cyr">Aug 29, 2023</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-p">Physika Forum · Applied Physics</div>
+        <div class="cico ci-p">🔭</div>
+        <div class="ctitle">Workshop on Telescope Making</div>
+        <div class="ciss">Dept. of Applied Physics, YCCE — Physika Forum Certificate of Appreciation. Workshop on Telescope Making. HOD Dr. H.V. Ganvir</div>
+        <div class="cyr">Feb 2, 2024</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-o">Physika Forum · Applied Physics</div>
+        <div class="cico ci-o">🔧</div>
+        <div class="ctitle">Soldering & Electronic Kit Designing</div>
+        <div class="ciss">Physika Forum, YCCE — Workshop: "Mastering the Art of Soldering & Electronic Kit Designing". HOD Dr. H.V. Ganvir</div>
+        <div class="cyr">Nov 23, 2023</div>
+      </div>
+      <div class="cc">
+        <div class="ccat ccat-p">ITechRoots 13.0 · YCCE IT</div>
+        <div class="cico ci-p">🏴‍☠️</div>
+        <div class="ctitle">Treasure Hunt — ITechRoots 13.0</div>
+        <div class="ciss">Dept. of Information Technology, YCCE — Participation in Treasure Hunt during ITechRoots 13.0. Oct 11-13, 2023</div>
+        <div class="cyr">Oct 2023</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEMBERSHIP -->
+  <div id="cert-member" class="cert-panel reveal">
+    <div class="cg2">
+      <div class="cc gov">
+        <div class="gov-crown">🏛️</div>
+        <div class="ccat ccat-b">ISTE · Founded 1968</div>
+        <div class="cico ci-b">🎓</div>
+        <div class="ctitle">ISTE Student Member</div>
+        <div class="ciss">The Indian Society for Technical Education — Admitted as Student Member. SC Code: MH057 · SM No: 3767. YCCE Nagpur</div>
+        <div class="cyr">Nov 22, 2023 – Nov 22, 2027</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <span class="sl reveal">// achievements</span>
+  <h2 class="st reveal">Proud <span>moments</span></h2>
+  <div class="achg reveal">
+    <div class="achc"><div class="achico">📊</div><div><div class="achtit">Google Analytics Certified</div><div class="achdesc">Earned Google Analytics certification from Google Skillshop (May 2026) — digital analytics, audience insights, and data-driven marketing. Certificate ID: 183797552.</div></div></div>
+    <div class="achc"><div class="achico">🤖</div><div><div class="achtit">Microsoft AI — Skill India · NCVET</div><div class="achdesc">Thrilled to earn "Unlocking AI for Everyone" — powered by Microsoft, Skill India & NCVET, Govt. of India. NSQF Level 2 recognised.</div></div></div>
+    <div class="achc"><div class="achico">🎓</div><div><div class="achtit">NPTEL Elite — IIT Kharagpur</div><div class="achdesc">NPTEL Elite in DBMS with 71% score from IIT Kharagpur — funded by MoE, Govt. of India. Among 12,988 certified candidates nationally.</div></div></div>
+    <div class="achc"><div class="achico">🇮🇳</div><div><div class="achtit">Viksit Bharat Young Leader 2026</div><div class="achdesc">Participated in Viksit Bharat Young Leaders Dialogue (VBYLD) 2026 and MY Bharat Budget Quest — Ministry of Youth Affairs & Sports, Govt. of India.</div></div></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="content">
+  <span class="sl reveal">// content creation</span>
+  <h2 class="st reveal">YouTube & <span>Social</span></h2>
+  <div class="ytcard reveal">
+    <div class="ytinco">🎥</div>
+    <div>
+      <div class="ytn">Teju Aglawe</div>
+      <div class="ytsub">Travel · Spiritual Journeys · Lifestyle · Adventure · Reels & Shorts</div>
+      <div class="ytpills">
+        <span class="ytp">Travel Vlogs</span><span class="ytp">Pench Tiger Reserve</span><span class="ytp">Maihar Devi Temple</span>
+        <span class="ytp">Ayodhya</span><span class="ytp">Nepal Series</span><span class="ytp">Ramghat</span>
+        <span class="ytp">Devotional Content</span><span class="ytp">Shorts & Reels</span>
+      </div>
+      <a href="https://www.youtube.com/@tejuaglawe" target="_blank" style="display:inline-flex;align-items:center;gap:.35rem;margin-top:1rem;color:var(--p);font-size:.82rem;font-weight:600;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif">Visit @tejuaglawe →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="extra">
+  <span class="sl reveal">// beyond code</span>
+  <h2 class="st reveal">Outside the <span>keyboard</span></h2>
+  <div class="extg reveal">
+    <div class="extc"><span class="ext-emo">♟️</span><div class="ext-tit">Chess Player</div><div class="ext-desc">Competed in Chess Tournament (YCCE Sports Club, Aug 2023) and Chess at ITechRoots 13.0 — strategic thinking and calm under pressure.</div></div>
+    <div class="extc"><span class="ext-emo">✈️</span><div class="ext-tit">Travel & Exploration</div><div class="ext-desc">Temples, mountains, adventure spots, and nature — every journey becomes a vlog on YouTube.</div><ul class="ext-list"><li>Pench Tiger Reserve</li><li>Maihar Devi · Ayodhya</li><li>Nepal Travel Series</li></ul></div>
+    <div class="extc"><span class="ext-emo">🎯</span><div class="ext-tit">Event Management</div><div class="ext-desc">Certificate of Appreciation as Volunteer at YCCE Upsurge 2024-25 — end-to-end planning, coordination and high-energy event execution.</div></div>
+    <div class="extc"><span class="ext-emo">💪</span><div class="ext-tit">Fitness & Self-Care</div><div class="ext-desc">Regular gym sessions, cardio routines, skin care and grooming — building lasting discipline and a healthy lifestyle daily.</div></div>
+    <div class="extc"><span class="ext-emo">🌿</span><div class="ext-tit">Wellness & Ayurveda</div><div class="ext-desc">Completed "Desh Ka Prakruti Parikshan" — Ministry of Ayush / NCISM. Prakruti: Kapha-Pitta dominant. Interested in holistic wellness.</div></div>
+    <div class="extc"><span class="ext-emo">🌟</span><div class="ext-tit">Personal Strengths</div><div class="ext-desc">Creative mindset, consistent learner, strong communicator — balancing academics, content, fitness, and civic engagement with clarity of purpose.</div></div>
+  </div>
+</section>
+
+<section id="contact" class="csec">
+  <div class="cglw"></div>
+  <div class="cinn reveal">
+    <h2 class="ctit2">Let's build<br><span class="cgrad">something</span><br>together.</h2>
+    <p class="csub2">Open to internships and opportunities in Analytics, Digital Marketing, AI & Content Creation.</p>
+    <div class="clnks">
+      <a href="mailto:tejaswiniaglawe27@gmail.com" class="clink">✉️ Email Me</a>
+      <a href="https://www.linkedin.com/in/tejaswiniaglawe/" target="_blank" class="clink">💼 LinkedIn</a>
+      <a href="https://github.com/tejuaglawe2005" target="_blank" class="clink">🐙 GitHub</a>
+      <a href="https://www.youtube.com/@tejuaglawe" target="_blank" class="clink">▶️ YouTube</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">Tejaswini Aglawe</div>
+  <div class="ftxt">© 2026 · Analytics · AI · Creator · Nagpur, India · 25+ Certificates</div>
+</footer>
+
+<script>
+const cg=document.getElementById('cg');
+document.addEventListener('mousemove',e=>{cg.style.left=e.clientX+'px';cg.style.top=e.clientY+'px'});
+const canvas=document.getElementById('cv');const ctx=canvas.getContext('2d');
+function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
+resize();window.addEventListener('resize',resize);
+const pts=Array.from({length:85},()=>({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,r:Math.random()*1.3+0.3,vx:(Math.random()-.5)*0.11,vy:(Math.random()-.5)*0.11,a:Math.random()*0.3+0.07}));
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);pts.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(167,139,250,${p.a})`;ctx.fill();p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;if(p.y<0)p.y=canvas.height;if(p.y>canvas.height)p.y=0});requestAnimationFrame(draw)}
+draw();
+function showSkill(e,cat){document.querySelectorAll('.skp').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.skb').forEach(b=>b.classList.remove('active'));const panel=document.getElementById('sk-'+cat);panel.classList.add('active');e.target.classList.add('active');setTimeout(()=>animBars(panel),50)}
+function animBars(p){p.querySelectorAll('.skf').forEach(b=>{b.style.width=b.dataset.w+'%'})}
+function showCert(e,cat){document.querySelectorAll('.cert-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.ctab').forEach(b=>b.classList.remove('active'));document.getElementById('cert-'+cat).classList.add('active');e.target.classList.add('active')}
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*50)})},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const sObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const a=document.querySelector('.skp.active');if(a)animBars(a);sObs.disconnect()}})},{threshold:0.25});
+const ss=document.getElementById('skills');if(ss)sObs.observe(ss);
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+const secs=document.querySelectorAll('section[id]');const nls=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-130)cur=s.id});nls.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--white)':''})},{passive:true});
+</script>
+</body>
+</html>
