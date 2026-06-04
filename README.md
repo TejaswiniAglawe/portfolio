@@ -6,9 +6,9 @@ Welcome to my personal portfolio website.
 https://tejaswiniaglawe.github.io/portfolio/
 
 ## About Me
-I am Tejaswini Aglawe, a B.Tech Computer Science student passionate about Data Analytics, Artificial Intelligence, Cloud Computing, and Digital Marketing.
+I am Tejaswini Aglawe, a B.Tech Computer Science student passionate about Data Analytics, AI, Cloud Computing, and Digital Marketing.
 
-## Technologies Used
+## Technologies
 - HTML
 - CSS
 - JavaScript
@@ -19,8 +19,17 @@ I am Tejaswini Aglawe, a B.Tech Computer Science student passionate about Data A
 - Smooth Animations
 - Project Showcase
 - Certifications Section
-- Contact Information
 
-## Live Preview
-Visit:
-https://tejaswiniaglawe.github.io/portfolio/
+## Screenshots
+
+### Home Page
+![Home](portfolio.png)
+
+### About Section
+![About](portfolio1.png)
+
+### Skills & Certifications
+![Skills](portfolio2.png)
+
+### Projects
+![Projects](portfolio3.png)
